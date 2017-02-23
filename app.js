@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || 8080);
 app.use(express.static(path.join(__dirname, APP_ROOT)));
 
 // -------------- Routing ---------------
-app.get('/', function(req, res) {
+app.get('/regist', function(req, res) {
   res.sendFile(path.join(__dirname, APP_ROOT, 'registration.html'));
 });
 app.get('/list', function(req, res) {
