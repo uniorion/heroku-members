@@ -10,7 +10,7 @@
     "server": "http-server -o -a localhost -p 8000",
     "dev": "npm run sass | npm run server",
     "build": "npm run mq-group | npm run css-opt",
-    "start": "node web.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "uniorion <uniorion@gmail.com>",
