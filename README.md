@@ -28,6 +28,11 @@
     - Tablet : 1024x768
     - Mobile : 750x1334
 
+4. 회원 API 서버  
+  a. RESTful API 를 지원하는 __json-server__ 를 이용  
+  b. Heroku 에서 서비스 되도록 등록  
+    - http://json-db.herokuapp.com/members  
+
 <br>
   
 ### # 기술스택
@@ -35,14 +40,14 @@
   a. OS - Windows 10 64bit  
   b. Dev Tool - VS Code  
   c. Browser - Chrome v56, IE 11, iPhone6 Safari  
-  d. Hosting - Heroku NodeJS Server
+  d. Hosting - Heroku NodeJS Server  
 
 2. 사용언어 및 도구  
-  HTML, CSS, Javascript, Sass, node.js, Github, SoureTree, Heroku, Postman
+  HTML, CSS, Javascript, Sass, node.js, Github, SoureTree, Heroku, Postman  
 
 3. Node 모듈   
-  a. http-server : 로컬에서 서버를 구성  
-  b. json-server : 임시 회원 API 서버 구성  
+  a. http-server : 로컬에서 개발서버를 구성  
+  b. json-server : 회원 API 서버 구성  
   c. node-sass : Sass 컴파일러  
   d. group-css-media-queries : CSS 의 미디어쿼리를 그룹핑  
   e. csso : CSS 를 압축  
