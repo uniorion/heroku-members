@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------
+$size-properties: width, height, min-width, min-height, max-width, max-height;
+
+@mixin size($properties) {
+  @each $property in $size-properties {
+    $index: index($properties, $property);
+    @if $index {
+      #{$property}: nth($properties, $index + 1);
+    }
+  }
+}
+
+// --------------------------------------------------------------------
+$margin-properties: top, right, bottom, left;
+
+@mixin margin($properties) {
+  @each $property in $margin-properties {
+    $index: index($properties, $property);
+    @if $index {
+      margin-#{$property}: nth($properties, $index + 1);
+    }
+  }
+}
+
+// --------------------------------------------------------------------
+$padding-properties: top, right, bottom, left;
+
+@mixin padding($properties) {
+  @each $property in $padding-properties {
+    $index: index($properties, $property);
+    @if $index {
+      padding-#{$property}: nth($properties, $index + 1);
+    }
+  }
+}
+
+// --------------------------------------------------------------------
+@mixin flex-align($h-align: flex-start, $v-align: stretch) {
+  display: flex;
+  align-items: $v-align;
+  justify-content: $h-align;
+}
+
+// --------------------------------------------------------------------
+%clearfix {
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }  
+}
+
+%a11y-hidden {
+	display: block;
+  margin: -1px;
+  padding: -1px;
+	text-indent: -9999em;
+	white-space: nowrap;
+	overflow: hidden;
+  width: 0px;
+  height: 0px;
+}

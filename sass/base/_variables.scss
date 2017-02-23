@@ -1,0 +1,45 @@
+// ----------- Layouts -----------
+$bp-mobile: 750px !default;
+$bp-tablet: 1024px !default;
+$bp-desktop: 1366px !default;
+
+$header-height-d: 100px;
+$main-width-d: 1024px;
+$main-width-t: 860px;
+$main-width-m: 700px;
+$main-height-d: 1000px;
+$footer-height-d: 60px;
+
+// ----------- Colors -----------
+$base-font-color: #1c1d21;
+$footer-font-color: #eeeff7;
+$bg-color: #eeeff7;
+$header-color: #dedfd7;
+$footer-color: #445878;
+
+$form-bg-color: #dedfd7;
+$input-border-color: #898989;
+$require-mark-color: #dd3333;
+$infomation-font-color: #1f1f2f;
+
+$button-bg-color: #72adaf;
+$button-border-color: #729da6;
+$button-font-color: #efefef;
+$focus-outline-color: #8787ee;
+
+$thead-border-color: #656565;
+$tr-border-color: #888888;
+$tr-hover-color: #dedfd7;
+
+// ----------- Font -----------
+$base-font-family: 'Spoqa Han Sans';
+$base-font-size: 1.6rem;
+$base-line-height: 1.5;
+
+$h1-font-size: 3.8rem;
+$h2-font-size: 2.8rem;
+$h3-font-size: 2rem;
+
+$form-font-size: 2rem;
+
+$btn-font-size-default: 1.6rem;

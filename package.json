@@ -1,0 +1,25 @@
+{
+  "name": "Member-Manager",
+  "version": "1.0.0",
+  "description": "Member Registration & Show Member List",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass -w -r sass -o application/css --source-map ./map --output-style- expanded",
+    "mq-group": "group-css-media-queries application/css/style.css application/css/style.css",
+    "css-opt": "csso application/css/style.css -o application/css/style.min.css",
+    "server": "http-server -o -a localhost -p 8000",
+    "start": "npm run sass | npm run server",
+    "build": "npm run mq-group | npm run css-opt"
+  },
+  "keywords": [],
+  "author": "uniorion <uniorion@gmail.com>",
+  "devDependencies": {
+    "csso": "^2.3.1",
+    "group-css-media-queries": "^1.4.1",
+    "http-server": "^0.9.0",
+    "node-sass": "^4.5.0"
+  },
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

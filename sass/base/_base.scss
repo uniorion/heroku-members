@@ -1,0 +1,134 @@
+@import "variables";
+@import "helper";
+@import "config";
+@import "layout";
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  line-height: $base-line-height;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+
+img {
+  vertical-align: top;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  &:hover,
+  &:focus {
+    outline: 2px solid $focus-outline-color;
+  }
+  &[class*="btn-"] {
+    @include padding(top 7px right 20px bottom 7px left 20px);
+    background: $button-bg-color;
+    font-size: $btn-font-size-default;
+    color: $button-font-color;
+    border: 1px solid $button-border-color;
+    border-radius: 4px;
+  }
+}
+
+form {
+  @include padding(top 25px right 25px bottom 25px left 25px);
+  background: $form-bg-color;
+  border-radius: 4px;
+  font-size: $form-font-size;
+  fieldset {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+legend {
+  @extend %a11y-hidden;
+}
+
+.form-element{
+  @include margin(bottom 12px);
+  label {
+    @include size(width 120px);
+    display: inline-block;
+  }
+  &.btn {    
+    @include margin(bottom 0);
+    @include padding(top 10px);
+    text-align: center;
+  }
+}
+
+input {
+  border: 1px solid $input-border-color;
+}
+input[type="text"],
+input[type="password"] {
+  @include padding(top 4px right 10px bottom 4px left 10px);
+  @include size(width 55%);
+}
+
+.a11y-hidden {
+  @extend %a11y-hidden;
+}
+
+.require-mark {
+  vertical-align: middle;
+  &:after {
+    content: "*";
+    color: $require-mark-color;
+  }
+}
+
+table {
+  @include size(width 100% max-height 600px);
+}
+caption {
+	text-indent: -9999em;
+	white-space: nowrap;
+	overflow: hidden;
+  width: 0;
+  height: 0;
+}
+tr {
+  height: 50px;
+  border-bottom: 1px solid $tr-border-color;
+  &:hover {
+    background-color: $tr-hover-color;
+  }
+}
+thead>tr {
+  &:hover {
+    background-color: transparent;
+  }
+}
+tr:last-child {
+  border-bottom: 1px solid $tr-border-color;
+}
+thead {
+  border-top: 2px solid $thead-border-color;
+  border-bottom: 2px solid $thead-border-color;
+}
+th,td {
+  @include padding(left 20px);
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover,
+  &.active,
+  &:focus {
+    color: $base-font-color;
+  }
+  &:hover,
+  &:focus {
+    outline: 2px solid $focus-outline-color;
+  }
+}

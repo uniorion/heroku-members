@@ -1,0 +1,128 @@
+@import "libs/libs";
+@import "base/base";
+
+.header-wrap {
+  header {
+    @extend %clearfix;
+    .logo {
+      @include margin(top 10px left 20px);
+      @include size(width 80px height 80px);
+    }
+    nav {
+      @include margin(top 30px right 20px);
+      float: right;
+    }
+  }
+}
+
+.footer-wrap {
+  footer {
+    @include margin(top 18px left 20px);
+    color: $footer-font-color;
+    @include mobile {
+      @include margin(top 0 left 0);
+    }
+    @include tablet {
+      @include margin(top 0 left 0);
+    }
+  }
+  @include mobile {
+    @include flex-align(center, center);
+  }
+  @include tablet {
+    @include flex-align(center, center);
+  }
+}
+
+// -----------------------------
+//  회원등록 
+main {
+  @include margin(top 30px left auto right auto);
+  @include padding(left 20px right 20px);
+  h1 {
+    text-align: center;
+  }
+  .registration {
+    @include margin(top 30px);
+    @include size(width 470px);
+    border-radius: 5px;
+    float: right;
+    @include mobile {
+      @include margin(left auto right auto);
+      @include size(width 380px);
+      float: none; 
+    }
+    @include tablet {
+      @include margin(left auto right auto);
+      @include size(width 510px);
+      float: none;
+    }
+    form {      
+      @include margin(top 15px);
+    }
+    .btn-registration-submit {
+      @include padding(top 10px);
+    }
+  }
+  .infomation {
+    @include margin(top 30px);
+    @include size(width 470px);
+    h2 {
+      text-align: center;
+    }
+    p {
+      @include margin(top 15px);
+      color: $infomation-font-color;
+    }
+    img {
+      @include margin(top 15px);
+      @include size(width 100%);
+    }
+  }
+}
+//  회원등록 
+// -----------------------------
+
+// -----------------------------
+//  회원목록
+main {
+  .member-list {
+    @include size(width 100%);
+    table {
+      @include margin(top 20px);
+      .num { width: 12%; }
+      .company { width: 30%; }
+      .name { width: 28%; }
+      .userid { width: 30%; }
+      tr>td:first-child {
+        text-align: center;
+      }
+    }
+    .pagination {
+      @include flex-align(center, center);
+      @include margin(top 30px);
+      @include size(width 100%);
+      ul {
+        @extend %clearfix;
+        border-radius: .5rem;
+        li {
+          @include flex-align(center, center);
+          @include size(width 30px height 30px);
+          float: left;
+          a {
+            &.active {
+              font-weight: 700;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      button {
+      }
+    }
+  }
+}
+
+//  회원목록
+// -----------------------------
+

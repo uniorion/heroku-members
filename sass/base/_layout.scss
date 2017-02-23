@@ -1,0 +1,29 @@
+.container {
+  background: $bg-color;
+  position: relative;
+  @include size(width 100%);
+}
+
+.header-wrap {
+  background: $header-color;
+  @include size(width 100% height $header-height-d);
+}
+
+main {
+  @include margin(left auto right auto);
+  @include size(max-width $main-width-d height $main-height-d);
+  @extend %clearfix;
+  @include mobile {
+    @include size(max-width $main-width-m);
+  }
+  @include tablet {
+    @include size(max-width $main-width-t);
+  }
+}
+
+.footer-wrap {
+  background: $footer-color;
+  position: absolute;
+  bottom: 0;
+  @include size(width 100% height $footer-height-d);
+}
