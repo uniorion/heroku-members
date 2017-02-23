@@ -8,9 +8,12 @@
   
   // '가입하기' 버튼 클릭 이벤트
   if ( btn_submit !== null ) {
-    btn_submit.onclick = function() {
+    btn_submit.onclick = function(e) {
       // *** Form Validation ***
-      
+
+      // submit 이벤트 제거
+      e.preventDefault();
+
       alert("가입이 완료 되었습니다");
       location.href = "/list";
     };
@@ -26,7 +29,7 @@
   // '회원가입' 버튼 클릭 이벤트
   if ( btn_go_regist !== null ) {
     btn_go_regist.onclick = function() {
-      location.href = "/";
+      location.href = "/regist";
     };
   }
 
