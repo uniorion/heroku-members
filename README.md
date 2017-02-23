@@ -1,7 +1,5 @@
 ##### - Coding Test
 
-#### [move to website → ](https://ctmembers.herokuapp.com/)
-
 ---
 
 ### # 목적
