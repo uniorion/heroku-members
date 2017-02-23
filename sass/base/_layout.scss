@@ -14,7 +14,7 @@ main {
   @include size(max-width $main-width-d height $main-height-d);
   @extend %clearfix;
   @include mobile {
-    @include size(max-width $main-width-m);
+    @include size(max-width $main-max-width-m min-width $main-min-width-m);
   }
   @include tablet {
     @include size(max-width $main-width-t);

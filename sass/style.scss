@@ -49,7 +49,7 @@ main {
     float: right;
     @include mobile {
       @include margin(left auto right auto);
-      @include size(width 380px);
+      @include size(width 100% max-width 470px);
       float: none; 
     }
     @include tablet {

@@ -55,6 +55,9 @@ legend {
   label {
     @include size(width 120px);
     display: inline-block;
+    @include mobile {
+      display: block;
+    }
   }
   &.btn {    
     @include margin(bottom 0);
@@ -68,8 +71,12 @@ input {
 }
 input[type="text"],
 input[type="password"] {
+  box-sizing: border-box;
   @include padding(top 4px right 10px bottom 4px left 10px);
-  @include size(width 55%);
+  @include size(width 65%);
+  @include mobile {
+    @include size(width 100%);
+  }
 }
 
 .a11y-hidden {
