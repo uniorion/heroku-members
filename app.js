@@ -2,20 +2,20 @@ var express = require('express');
 var path    = require('path');
 var app     = express();
 
-const APP_ROOT_FOLDER = "/application";
+const APP_ROOT = "/application";
 
 // port 설정, 환경변수에 PORT 값이 없으면 8080
 app.set('port', process.env.PORT || 8080);
 
 // 정적파일 root 위치 설정
-app.use(express.static(path.join(__dirname, APP_ROOT_FOLDER)));
+app.use(express.static(path.join(__dirname, APP_ROOT)));
 
 // -------------- Routing ---------------
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, APP_ROOT_FOLDER, 'registration.html'));
+  res.sendFile(path.join(__dirname, APP_ROOT, 'registration.html'));
 });
 app.get('/list', function(req, res) {
-  res.sendFile(path.join(__dirname, APP_ROOT_FOLDER, 'member-list.html'));
+  res.sendFile(path.join(__dirname, APP_ROOT, 'member-list.html'));
 });
 // -------------- Routing ---------------
 
