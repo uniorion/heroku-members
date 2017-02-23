@@ -8,8 +8,9 @@
     "mq-group": "group-css-media-queries application/css/style.css application/css/style.css",
     "css-opt": "csso application/css/style.css -o application/css/style.min.css",
     "server": "http-server -o -a localhost -p 8000",
-    "start": "npm run sass | npm run server",
-    "build": "npm run mq-group | npm run css-opt"
+    "dev": "npm run sass | npm run server",
+    "build": "npm run mq-group | npm run css-opt",
+    "start": "node web.js"
   },
   "keywords": [],
   "author": "uniorion <uniorion@gmail.com>",
